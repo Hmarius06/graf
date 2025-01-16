@@ -2,7 +2,7 @@
 #include <fstream>
 using namespace std;
 
-int a[10][10],n,m;
+int a[10][10],n,m[10];
 
 
 void citeste()
@@ -47,16 +47,18 @@ void afisare_m()
 }
 void grad_m()
 {
-    int i,j,m[10],max=0;
-    cout<<"Nodurile cu grad maxim sunt:"<<endl;
+    int i,j,max=0;
     for(i=1;i<=n;i++)
-        {m[i]=0;
+    {
+            m[i]=0;
         for(j=1;j<=n;j++)
         {
                 if(a[i][j]=1)m[i]++;
-                if(max<m[i])max=m[i];
         }
-        }
+    }
+    for(i=1;i<=n;i++)
+        if(max<m[i])max=m[i];
+    cout<<"Nodurile cu grad maxim sunt:"<<endl;
     for(i=1;i<=n;i++)
         if(max==m[i])cout<<i<<" are gradul maxim de "<<m[i]<<endl;
 
@@ -64,19 +66,8 @@ void grad_m()
 void izolate()
 {
     int i,j,x,y=0;
-     for(i=2;i<=n;i++)
-     {
-        x=0;
-        for(j=1;j<i;j++)
-    {
-        if(a[i][j]=1)x=1;
-    }
-        if(x==0)
-        {
-            cout<<"nodul "<<i<<" este izolat "<<endl;
-            y++;
-        }
-     }
+        for(i=1;i<=n;i++)
+            if(m[i]==0)cout<<"Muchia "<<i<<" este izolata."<<endl;
      if(y!=0)cout<<"nr minim de muchii pentru ca graful sa nu aiba noduri izolate este "<<(n+1)/2<<endl;
 }
 void U_m()
@@ -86,7 +77,7 @@ void U_m()
     for(i=2;i<=n;i++)
         for(j=1;j<i;j++)
     {
-        if(a[i][j]==1)cout<<"["<<j<<","<<i<<"] ";
+        if(a[i][j]==1)cout<<"["<<i<<","<<j<<"] ";
     }
     cout<<"}"<<endl;
 }
