@@ -66,7 +66,8 @@ void afisare_vecin()
     cout<<"Vecini lui "<<p<<" sunt: "<<endl;
     for(i=1;i<=k;i++)
     {
-        if(u[i].x==p || u[i].y==p)cout<<i<<" ";
+        if(u[i].x == p )cout<<u[i].y<<" ";
+        else if(u[i].y == p)cout<<u[i].x<<" ";
     }
     cout<<endl;
 }
@@ -83,3 +84,15 @@ int main()
 
  return 0;
 }
+9 8
+0 1 1 0 0 1 0 0 0
+1 0 0 1 1 0 0 0 0
+1 0 0 0 0 1 1 0 0
+0 1 0 0 0 0 0 0 1
+0 1 0 0 0 0 0 0 0
+1 0 1 0 0 0 0 0 0
+0 0 1 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 1 0 0 0 0 0
+
+
