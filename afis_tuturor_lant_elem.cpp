@@ -47,7 +47,7 @@ int solutie()
 
 void tipar()
 {
-    este=1;
+    este++;
     for (int i=1;i<=k;i++)
         cout<<st[i]<<" ";
     cout<<endl;
@@ -55,9 +55,9 @@ void tipar()
 
 void bt()
 {
-    k=1;
+    k=2;
     st[k]=0;
-    while(k>0)
+    while(k>1)
     {
         as=1;
         ev=0;
@@ -85,9 +85,11 @@ int main()
             st[1]=x;
             bt();
         }
-    if(este!=1)cout<<"NU exista lanturi elementare. ";
+    if(este<0)cout<<"NU exista lanturi elementare. ";
+    else cout<<"sunt "<<este<<" lanturi";
     return 0;
 }
+
 8
 0 1 1 1 0 0 0 0
 1 0 0 0 1 0 0 0
