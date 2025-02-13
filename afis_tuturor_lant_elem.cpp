@@ -88,3 +88,13 @@ int main()
     if(este!=1)cout<<"NU exista lanturi elementare. ";
     return 0;
 }
+8
+0 1 1 1 0 0 0 0
+1 0 0 0 1 0 0 0
+1 0 0 1 1 0 0 0
+1 0 1 0 0 0 0 0
+0 1 1 0 0 0 0 0
+0 0 0 0 0 0 1 1
+0 0 0 0 0 1 0 0
+0 0 0 0 0 1 0 0
+
