@@ -45,8 +45,7 @@ void generare()
 
     }
 void verificare(unsigned b, unsigned c)
-{if(a[b][c]!='#')
- cout<<"exista drum de la "<<b<<" la "<<c<<" si costul minim : "<<a[b][c];
+{if(a[b][c]!='$') cout<<"exista drum de la "<<b<<" la "<<c<<" si costul minim : "<<a[b][c];
  else cout<<"nu este drum";
 }
 void drum(int i,int j)
