@@ -41,10 +41,10 @@ void SRD(nod* c)
 
  int main()
  {
-     int n;
-     cout<<"Cate noduri ai?"<<endl;cin>>n;
-    for(int i=1;i<=n;i++)
-        inserare(c,i);
+     int k
+    ifstream f("inser.in");
+    while(f>>k);
+        inserare(c,k);
     SRD(c);
 
     return 0;
